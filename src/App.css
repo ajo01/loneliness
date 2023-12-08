@@ -1,0 +1,91 @@
+.App {
+  font-family: "Onest", sans-serif;
+  /* Onest font weights: 100 - 900 */
+  /**/
+  text-align: center;
+  color: var(--textColor);
+}
+
+/* Pages */
+a {
+  color: var(--aHighlight);
+}
+
+/* slide is a reserved class name / do not change */
+.slide {
+  display: flex;
+}
+
+.slidePage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* https://codepen.io/Fernos/pen/vazgzj */
+ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* Navigation dots */
+.dots-wrapper {
+  position: absolute;
+  display: flex;
+  width: 10%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.85;
+  z-index: 2;
+  align-items: center;
+}
+
+.dots-list {
+  position: absolute;
+  right: 40px;
+  margin-right: 25px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--dot);
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.slideTitle {
+  font-size: 48px;
+}
+.slideTitleGrad{
+  font-size: 48px;
+  color:#409AF0;
+  
+  
+}
+.slideSubTitle {
+  font-size: 32px;
+  padding-top: 32px;
+}
+
+select option {
+  background-color: var(--bg);
+  padding: 8px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  text-transform: lowercase;
+  color: white;
+}
+
+select option:hover {
+  background-color: purple;
+}

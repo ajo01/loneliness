@@ -1,0 +1,29 @@
+.dotChartPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 24px;
+  margin-top: 10vh;
+  color: white;
+}
+
+.dots {
+  opacity: 1;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0;
+  text-align: center;
+  fill: var(--textColor);
+  fill: var(--chartTextColor);
+}
+
+.dotChartPage line {
+  opacity: 30%;
+}
+

@@ -1,0 +1,78 @@
+.arrowBtn {
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  left: 50%;
+}
+
+.arrowBtn:hover .arrow {
+  border-right: 4px #fff solid;
+  border-bottom: 4px #fff solid;
+}
+.arrowBtn:hover .arrow:before {
+  display: none;
+}
+
+.down .arrow {
+  transform: translateX(-50%);
+}
+
+.up .arrow {
+  transform: translateX(50%);
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  margin: -20px 0 0 -20px;
+  
+  border-left: none;
+  border-top: none;
+  border-right: 3px #5C5C5C solid;
+  border-bottom: 3px #5C5C5C solid;
+  transition: 0.3s;
+}
+
+.down {
+  -webkit-transform: rotate(45deg);
+  bottom: 20px;
+}
+
+.up {
+  -webkit-transform: rotate(225deg);
+  top: 40px;
+}
+
+.arrow:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  stroke: 2px;
+  top: 50%;
+  margin: -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-8px, -8px);
+  }
+}

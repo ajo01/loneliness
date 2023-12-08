@@ -1,0 +1,83 @@
+.sankeyDiagramPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.node rect:hover {
+  stroke: white;
+  stroke-opacity: 100%;
+  stroke-width: 3px;
+}
+
+.sankeyDiagramPage text {
+  fill: var(--chartTextColor);
+}
+
+.loneliness-text
+{
+  font-size : 22px;
+}
+
+.isolation-text
+{
+  font-size : 22px;
+}
+
+.node-label
+{
+  font-size: 13px;
+}
+
+/* Tooltip */
+#sankey-tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+}
+
+.sankey-tooltip-heading {
+  font-family: "onest";
+  font-weight: bold;
+  color: #000;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.sankey-tooltip-content div {
+  font-family: "onest";
+  color: #000;
+  font-size: 10px;
+  padding-bottom: 3px;
+  display: flex;
+}
+
+.sankey-tooltip-square {
+  width: 10px;
+  height: 10px;
+  margin-top: 1px;
+  margin-right: 4px;
+  border: 1px solid black;
+}
+
+.sankey-tooltip-percentage {
+  width: 30px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.sankey-tooltip-attribute {
+  margin-left: 3px;
+  flex-grow: 1;
+}

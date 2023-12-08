@@ -1,0 +1,58 @@
+#lastSlide {
+  margin: 30vh 20vw;
+}
+
+.txt {
+  font-size: 24px;
+  display: flex;
+}
+
+
+.txt div {
+  margin: 20px;
+}
+
+#lastSlideTitle {
+  font-size: 32px;
+  transition: 200ms;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#containerRow {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center; 
+  padding-top: 50px;
+  gap: 50px;
+} 
+
+
+.lastSlide div.container .vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: 100px !important;
+  padding-bottom: 24px;
+}
+
+.slidePage div.container-row{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+element.style{
+  display:flex;
+}
+
+
+
+

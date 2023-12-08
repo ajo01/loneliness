@@ -1,0 +1,49 @@
+#scatterIntro {
+  margin: 23vh 15vw 0 15vw;
+  text-align: left;
+}
+
+.txt {
+  margin-top: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 20px;
+  padding-right: 200px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+#highlightBox {
+  background: var(--highlightStart);
+  margin: 20px 20px 0px 0px;
+  align-self: center;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+#highlightBoxYellow {
+  background: linear-gradient(
+    94deg,
+    var(--highlightYellowStart) -33.01%,
+    var(--highlightYellowEnd) 164.63%
+  );
+  margin: 20px 20px 0px 0px;
+  align-self: center;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+.textBlue {
+  color: var(--blueText);
+  padding: 20px;
+  font-weight: 600;
+}
+
+.textYellow {
+  color: var(--yellowText);
+  padding: 20px;
+  font-weight: 600;
+}

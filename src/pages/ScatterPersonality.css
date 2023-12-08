@@ -1,0 +1,157 @@
+.scatterPersonality {
+  width: 100vw;
+  height: 100vh;
+}
+
+.right-heading {
+  position: fixed;
+  right: 0;
+  width: 50%;
+  font-size: 2.5vh;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+}
+
+.left-heading {
+  position: fixed;
+  left: 0;
+  width: 50%;
+  font-size: 2.5vh;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+}
+
+.scatterPersonality .axis-label.axis-label-x text {
+  font-size: 1.4vh;
+}
+
+.personality-yLabel {
+  color: white;
+  font-size: 15px;
+  margin-top: 28vh;
+  position: absolute;
+  width: 100px;
+  line-height: 1.4;
+}
+
+.left-vis-container .personality-yLabel {
+  left: 35px;
+}
+
+.label {
+  margin-top: 5vh;
+}
+
+.annotations {
+  align-items: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.low-introverted {
+  transform: translate(-10px, 15px);
+  width: 50%;
+  position: relative;
+}
+
+.high-introverted {
+  transform: translate(25%, 15px);
+  width: 50%;
+  position: relative;
+}
+
+.low-extraverted {
+  transform: translate(-15%, 15px);
+  width: 50%;
+  position: relative;
+}
+
+.high-extraverted {
+  transform: translate(5%, 15px);
+  width: 50%;
+  position: relative;
+}
+
+.scatterPersonality .emoji > * {
+  transform: scale(0.3);
+}
+
+.left-vis-container {
+  position: fixed;
+  left: 0;
+  width: 50%;
+}
+
+.right-vis-container {
+  position: fixed;
+  right: 0;
+  width: 50%;
+}
+
+#introverted-vis-personality {
+  max-width: 500px;
+}
+
+#extraverted-vis-personality {
+  max-width: 500px;
+}
+
+/* Tooltip */
+#scatter-tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+}
+
+/* Tooltip */
+#tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+  
+}
+.tooltip-heading {
+  color: #6b6b6b;
+  font-size: 8px;
+}
+
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-family: "onest";
+  font-weight: 600;
+  padding-top: 5px;
+}
+.tooltip-spacer {
+  height: 10px;
+}
+#tooltip ul {
+  margin: 5px 0 0 0;
+  padding-left: 0px;
+}

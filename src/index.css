@@ -1,0 +1,46 @@
+:root {
+  --bg:#131315;
+  --textColor: rgb(230, 230, 237);
+  --aHighlight: #409af0;
+  --dot: rgba(179, 179, 179, 0.433);
+  --blueText: #b6dcff;
+  --yellowText: #fff8ac;
+  --tickColor: #5e5e5e65;
+  --chartTextColor: rgb(177, 177, 178);
+  --border: #636363;
+
+  --tooltipText: #333;
+  --tooltipBg: #e9f4ff;
+
+  --highlightStart: #0A60BD;
+  --highlightEnd: rgba(199, 129, 255, 0.36);
+  --highlightYellowStart: rgba(251, 210, 78, 0.4);
+  --highlightYellowEnd: rgba(255, 180, 55, 0.4);
+
+  --linearGradientFirst: #f49d0c;
+  --linearGradientSecond: #fef3c7;
+  --linearGradientThird: #8bc1f6;
+  --linearGradientFourth: #409af0;
+
+  --pointFirst: #f49d0c;
+  --pointSecond: #fbd24e;
+  --pointThird: #fef3c7;
+  --pointFourth: #bddafa;
+  --pointFifth: #409af0;
+  --pointSixth: #0a60bd;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Onest" sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

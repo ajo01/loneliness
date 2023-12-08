@@ -1,0 +1,201 @@
+.bidirectionalPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.body {
+  font-family: "Onest", sans-serif;
+  color: white;
+}
+
+.axis-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.bidirectionalPage .container-centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.bidirectionalPage .container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.bidirectionalPage .container .left-side {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.bidirectionalPage .container .right-side {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.bidirectionalPage .axis path {
+  display: none;
+}
+
+.axis text {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "onest";
+  fill: var(--chartTextColor);
+}
+
+.axis line {
+  transition: 0.3s;
+  font-size: 10px;
+  font-family: "onest";
+  fill: var(--tickColor);
+}
+
+.y-axis .tick:first-child line {
+  opacity: 70%;
+  stroke-width: 2px;
+}
+.y-axis .tick:first-child text {
+  display: none;
+}
+.x-axis .tick:first-child line {
+  display: none;
+}
+
+.axis-title {
+  color: white;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 10vh;
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+/* Tooltip */
+#tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+}
+.tooltip-heading {
+  color: #6b6b6b;
+  font-size: 8px;
+}
+
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-family: "onest";
+  font-weight: 600;
+  padding-top: 5px;
+}
+.tooltip-spacer {
+  height: 10px;
+}
+#tooltip ul {
+  margin: 5px 0 0 0;
+  padding-left: 0px;
+}
+
+/* Marks */
+.stacked-bar {
+  transition: 0.6s;
+  transition-timing-function: ease-in-out;
+}
+.bar {
+  transition: 0.6s;
+}
+.point {
+  transition: 0.3s;
+  animation: hideshow 1s ease-in-out;
+}
+.bidirectionalPage.circle-point {
+  transition: 0.3s;
+}
+.tick {
+  text-overflow: ellipsis;
+}
+.emoji > * {
+  transform: scale(0.5);
+  transition: 0.3s;
+}
+.tooltip-icon {
+  transform: scale(0.1);
+  width: 1px;
+  height: 1px;
+}
+
+/* Marks: States*/
+
+.stacked-bar:hover {
+  transition: 0s;
+  stroke: #fff;
+  stroke-opacity: 100%;
+  stroke-width: 3px;
+}
+#barchart {
+  margin-top: 7vh;
+}
+
+#barchart .bar:hover {
+  transition: 0s;
+  stroke: #fff;
+  stroke-opacity: 100%;
+  stroke-width: 3px;
+}
+
+.invisi-bar:hover {
+  transition: 0s;
+  stroke: #fff;
+  stroke-opacity: 100%;
+  stroke-width: 3px;
+}
+
+.bar.inactive {
+  opacity: 50%;
+  fill: "#404040" !important;
+  color: "#404040";
+}
+.circle-point.inactive {
+  opacity: 50%;
+  fill: "#404040" !important;
+  color: "#404040";
+}
+.circle-point:hover {
+  transition: 0s;
+}
+
+/* .bar-group .inactive{
+    opacity: 50%;
+    fill: "#404040" !important;
+    color: "#404040";
+} */
+
+.stacked-bar.active {
+  transition: 0s !important;
+  stroke: #fff;
+  stroke-opacity: 100%;
+  stroke-width: 3px;
+  z-index: 99 !important;
+}

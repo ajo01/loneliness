@@ -1,0 +1,145 @@
+.scatterplotPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 24px;
+  margin-top: 10vh;
+  color: white;
+}
+
+.attributeSelect {
+  outline: none;
+  font-family: "Onest", sans-serif;
+  font-size: 24px;
+  background: transparent;
+  margin: 0 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 5px;
+  transition: border 0.3s;
+  border-bottom: 1px solid var(--border);
+}
+
+.full-scatter-averageLinelabel
+{
+  position: relative;
+  top : 7px;
+}
+
+.yLabel {
+  color: white;
+  margin-top: 200px;
+  margin-left: 50px;
+  position: absolute;
+  width: 170px;
+  line-height: 1.4;
+}
+
+.yLabel-right {
+  color: white;
+  margin-top: 220px;
+  right: 130px;
+  position: absolute;
+  width: 170px;
+  line-height: 1.4;
+}
+
+.emoji > * {
+  transform: scale(0.5);
+}
+
+.axis-label {
+  font-size: 14px;
+}
+
+.axis-label-x {
+  color: var(--chartTextColor);
+  font-weight: 800;
+}
+
+.avgLine {
+  stroke-width: 2px;
+  stroke-dasharray: 3, 3;
+}
+
+.tick line,
+.domain {
+  color: var(--tickColor);
+}
+
+#vis-scatter {
+  max-width: 1000px;
+}
+
+.scatterplotPage .label {
+  margin-top: 3vh;
+}
+/* Point */
+.circle-point:hover{
+  stroke:white;
+  stroke-width: 3px;
+}
+
+
+
+/* Tooltip */
+#full-scatter-tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+}
+
+/* Tooltip */
+#tooltip {
+  text-align: left;
+  position: absolute;
+  display: none;
+  background: var(--tooltipBg);
+  box-shadow: 0px 0px 15px 15px rgb(18, 18, 18 / 0.6);
+
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px;
+  min-width: 160px;
+  color: var(--tooltipText);
+  border-radius: 5px;
+  outline: none;
+  shape-rendering: crispEdges;
+  
+}
+.tooltip-heading {
+  color: #6b6b6b;
+  font-size: 8px;
+}
+
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-family: "onest";
+  font-weight: 600;
+  padding-top: 5px;
+}
+.tooltip-spacer {
+  height: 10px;
+}
+#tooltip ul {
+  margin: 5px 0 0 0;
+  padding-left: 0px;
+}

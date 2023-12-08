@@ -1,0 +1,130 @@
+ID,gender,category,value,indicators,amount,STATUS
+1,All,total,"Total, 15 years and over",Always or often feels lonely,4140,0
+2,All,total,"Total, 15 years and over",Sometimes feels lonely,10362,0
+3,All,total,"Total, 15 years and over",Rarely or never feels lonely,17687,0
+4,Men,age,15 to 24 years,Always or often feels lonely,0,F
+5,Men,age,15 to 24 years,Sometimes feels lonely,795,E
+6,Men,age,15 to 24 years,Rarely or never feels lonely,1176,E
+7,Men,age,25 to 54 years,Always or often feels lonely,1027,0
+8,Men,age,25 to 54 years,Sometimes feels lonely,2401,0
+9,Men,age,25 to 54 years,Rarely or never feels lonely,4322,0
+10,Men,age,25 to 34 years,Always or often feels lonely,427,E
+11,Men,age,25 to 34 years,Sometimes feels lonely,902,0
+12,Men,age,25 to 34 years,Rarely or never feels lonely,1469,0
+13,Men,age,35 to 44 years,Always or often feels lonely,330,E
+14,Men,age,35 to 44 years,Sometimes feels lonely,821,0
+15,Men,age,35 to 44 years,Rarely or never feels lonely,1475,0
+16,Men,age,45 to 54 years,Always or often feels lonely,269,E
+17,Men,age,45 to 54 years,Sometimes feels lonely,678,0
+18,Men,age,45 to 54 years,Rarely or never feels lonely,1377,0
+19,Men,age,55 to 64 years,Always or often feels lonely,238,E
+20,Men,age,55 to 64 years,Sometimes feels lonely,679,0
+21,Men,age,55 to 64 years,Rarely or never feels lonely,1594,0
+22,Men,age,65 years and over,Always or often feels lonely,240,E
+23,Men,age,65 years and over,Sometimes feels lonely,913,0
+24,Men,age,65 years and over,Rarely or never feels lonely,2219,0
+25,Men,age,65 to 74 years,Always or often feels lonely,-1,F
+26,Men,age,65 to 74 years,Sometimes feels lonely,540,0
+27,Men,age,65 to 74 years,Rarely or never feels lonely,1434,0
+28,Men,age,75 years and over,Always or often feels lonely,-1,F
+29,Men,age,75 years and over,Sometimes feels lonely,373,E
+30,Men,age,75 years and over,Rarely or never feels lonely,785,0
+31,Men,immigration,Non-immigrants,Always or often feels lonely,1291,0
+32,Men,immigration,Non-immigrants,Sometimes feels lonely,3056,0
+33,Men,immigration,Non-immigrants,Rarely or never feels lonely,6686,0
+34,Men,immigration,Immigrants,Always or often feels lonely,587,E
+35,Men,immigration,Immigrants,Sometimes feels lonely,1678,0
+36,Men,immigration,Immigrants,Rarely or never feels lonely,2512,0
+37,Men,education,"No certificate, diploma or degree",Always or often feels lonely,0,F
+38,Men,education,"No certificate, diploma or degree",Sometimes feels lonely,632,E
+39,Men,education,"No certificate, diploma or degree",Rarely or never feels lonely,1478,0
+40,Men,education,Secondary (high) school diploma or equivalency certificate,Always or often feels lonely,521,E
+41,Men,education,Secondary (high) school diploma or equivalency certificate,Sometimes feels lonely,1193,0
+42,Men,education,Secondary (high) school diploma or equivalency certificate,Rarely or never feels lonely,2131,0
+43,Men,education,Apprenticeship or trades certificate or diploma,Always or often feels lonely,211,E
+44,Men,education,Apprenticeship or trades certificate or diploma,Sometimes feels lonely,491,0
+45,Men,education,Apprenticeship or trades certificate or diploma,Rarely or never feels lonely,1107,0
+46,Men,education,"College, CEGEP or other non-university certificate or diploma",Always or often feels lonely,242,E
+47,Men,education,"College, CEGEP or other non-university certificate or diploma",Sometimes feels lonely,739,0
+48,Men,education,"College, CEGEP or other non-university certificate or diploma",Rarely or never feels lonely,1534,0
+49,Men,education,Bachelor's degree or higher,Always or often feels lonely,442,0
+50,Men,education,Bachelor's degree or higher,Sometimes feels lonely,1462,0
+51,Men,education,Bachelor's degree or higher,Rarely or never feels lonely,2669,0
+52,Men,work,Working at a paid job or business,Always or often feels lonely,1052,0
+53,Men,work,Working at a paid job or business,Sometimes feels lonely,2702,0
+54,Men,work,Working at a paid job or business,Rarely or never feels lonely,5618,0
+55,Men,work,Retired,Always or often feels lonely,217,E
+56,Men,work,Retired,Sometimes feels lonely,826,0
+57,Men,work,Retired,Rarely or never feels lonely,1951,0
+58,Men,work,Other activity,Always or often feels lonely,626,E
+59,Men,work,Other activity,Sometimes feels lonely,1260,0
+60,Men,work,Other activity,Rarely or never feels lonely,1742,0
+61,Men,urbanization,Urban areas,Always or often feels lonely,1706,0
+62,Men,urbanization,Urban areas,Sometimes feels lonely,4376,0
+63,Men,urbanization,Urban areas,Rarely or never feels lonely,7875,0
+64,Men,urbanization,Rural areas,Always or often feels lonely,190,E
+65,Men,urbanization,Rural areas,Sometimes feels lonely,413,0
+66,Men,urbanization,Rural areas,Rarely or never feels lonely,1435,0
+67,Women,age,15 to 24 years,Always or often feels lonely,0,F
+68,Women,age,15 to 24 years,Sometimes feels lonely,960,E
+69,Women,age,15 to 24 years,Rarely or never feels lonely,782,E
+70,Women,age,25 to 54 years,Always or often feels lonely,1054,0
+71,Women,age,25 to 54 years,Sometimes feels lonely,2620,0
+72,Women,age,25 to 54 years,Rarely or never feels lonely,3945,0
+73,Women,age,25 to 34 years,Always or often feels lonely,361,E
+74,Women,age,25 to 34 years,Sometimes feels lonely,943,0
+75,Women,age,25 to 34 years,Rarely or never feels lonely,1286,0
+76,Women,age,35 to 44 years,Always or often feels lonely,377,E
+77,Women,age,35 to 44 years,Sometimes feels lonely,845,0
+78,Women,age,35 to 44 years,Rarely or never feels lonely,1421,0
+79,Women,age,45 to 54 years,Always or often feels lonely,316,E
+80,Women,age,45 to 54 years,Sometimes feels lonely,831,0
+81,Women,age,45 to 54 years,Rarely or never feels lonely,1238,0
+82,Women,age,55 to 64 years,Always or often feels lonely,294,E
+83,Women,age,55 to 64 years,Sometimes feels lonely,829,0
+84,Women,age,55 to 64 years,Rarely or never feels lonely,1470,0
+85,Women,age,65 years and over,Always or often feels lonely,441,0
+86,Women,age,65 years and over,Sometimes feels lonely,1166,0
+87,Women,age,65 years and over,Rarely or never feels lonely,2179,0
+88,Women,age,65 to 74 years,Always or often feels lonely,269,E
+89,Women,age,65 to 74 years,Sometimes feels lonely,657,0
+90,Women,age,65 to 74 years,Rarely or never feels lonely,1382,0
+91,Women,age,75 years and over,Always or often feels lonely,172,E
+92,Women,age,75 years and over,Sometimes feels lonely,509,0
+93,Women,age,75 years and over,Rarely or never feels lonely,797,0
+94,Women,immigration,Non-immigrants,Always or often feels lonely,1685,0
+95,Women,immigration,Non-immigrants,Sometimes feels lonely,3990,0
+96,Women,immigration,Non-immigrants,Rarely or never feels lonely,6220,0
+97,Women,immigration,Immigrants,Always or often feels lonely,545,E
+98,Women,immigration,Immigrants,Sometimes feels lonely,1498,0
+99,Women,immigration,Immigrants,Rarely or never feels lonely,2043,0
+100,Women,education,"No certificate, diploma or degree",Always or often feels lonely,425,E
+101,Women,education,"No certificate, diploma or degree",Sometimes feels lonely,779,0
+102,Women,education,"No certificate, diploma or degree",Rarely or never feels lonely,1087,0
+103,Women,education,Secondary (high) school diploma or equivalency certificate,Always or often feels lonely,602,0
+104,Women,education,Secondary (high) school diploma or equivalency certificate,Sometimes feels lonely,1467,0
+105,Women,education,Secondary (high) school diploma or equivalency certificate,Rarely or never feels lonely,2013,0
+106,Women,education,Apprenticeship or trades certificate or diploma,Always or often feels lonely,0,F
+107,Women,education,Apprenticeship or trades certificate or diploma,Sometimes feels lonely,254,E
+108,Women,education,Apprenticeship or trades certificate or diploma,Rarely or never feels lonely,476,0
+109,Women,education,"College, CEGEP or other non-university certificate or diploma",Always or often feels lonely,445,0
+110,Women,education,"College, CEGEP or other non-university certificate or diploma",Sometimes feels lonely,1169,0
+111,Women,education,"College, CEGEP or other non-university certificate or diploma",Rarely or never feels lonely,1878,0
+112,Women,education,Bachelor's degree or higher,Always or often feels lonely,518,0
+113,Women,education,Bachelor's degree or higher,Sometimes feels lonely,1681,0
+114,Women,education,Bachelor's degree or higher,Rarely or never feels lonely,2502,0
+115,Women,work,Working at a paid job or business,Always or often feels lonely,1034,0
+116,Women,work,Working at a paid job or business,Sometimes feels lonely,2746,0
+117,Women,work,Working at a paid job or business,Rarely or never feels lonely,4017,0
+118,Women,work,Retired,Always or often feels lonely,385,0
+119,Women,work,Retired,Sometimes feels lonely,1262,0
+120,Women,work,Retired,Rarely or never feels lonely,2129,0
+121,Women,work,Other activity,Always or often feels lonely,826,0
+122,Women,work,Other activity,Sometimes feels lonely,1566,0
+123,Women,work,Other activity,Rarely or never feels lonely,2231,0
+124,Women,urbanization,Urban areas,Always or often feels lonely,1953,0
+125,Women,urbanization,Urban areas,Sometimes feels lonely,4884,0
+126,Women,urbanization,Urban areas,Rarely or never feels lonely,7067,0
+127,Women,urbanization,Rural areas,Always or often feels lonely,291,E
+128,Women,urbanization,Rural areas,Sometimes feels lonely,690,0
+129,Women,urbanization,Rural areas,Rarely or never feels lonely,1309,0

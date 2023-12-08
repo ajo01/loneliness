@@ -1,0 +1,18 @@
+#creditSlide {
+    margin: 20vh 10vw;
+    text-align: left;
+}
+  
+.txt {
+    font-size: 22px;
+    display: flex;
+}
+
+#creditSlide.slideTitle{
+    font-size: 32px;
+}
+
+.spacer{
+    height:50px;
+    padding: 50px;
+}
