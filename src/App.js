@@ -95,7 +95,7 @@ function App() {
 
         const renamedData = renameCols(data);
 
-        // convert needed pieces of data into integers rather than strings
+        // Convert needed pieces of data into integers rather than strings
         const convertToInt = (data) => {
           return data.map((d) => {
             return {
