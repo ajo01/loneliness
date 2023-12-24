@@ -1,3 +1,15 @@
+# Loneliness - A Story
+
+The feeling of loneliness can sometimes feel inescapable. In many, it can become chronic
+and even lead to depression. In others, it can spur a need to take action and go out more.
+Why do we feel lonely? And what factors contribute to it? What can we discover about
+loneliness and its patterns?
+These are the questions that led us to explore the topic of loneliness for our project. For
+our project, we wanted to focus on the everyday impacts and factors that contribute to
+loneliness.
+We wanted to take a data-driven story approach to talk about the issue of loneliness and
+its factors and see correlations and interesting patterns for ourselves and others alike.
+
 ## How to run
 
 This a React app. You can run it 2 ways.

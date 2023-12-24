@@ -9,7 +9,7 @@ export class Sankey {
     _links,
     _covidAttributes,
     _distressAttributes,
-    _attributeOrder,
+    _attributeOrder
   ) {
     this.config = {
       parentElement: _config.parentElement,
@@ -39,7 +39,7 @@ export class Sankey {
       .append("g")
       .attr(
         "transform",
-        `translate(${vis.config.margin.left},${vis.config.margin.top})`,
+        `translate(${vis.config.margin.left},${vis.config.margin.top})`
       );
 
     vis.covidColorScale = d3
@@ -91,12 +91,12 @@ export class Sankey {
   renderVis() {
     let vis = this;
     const nodeLabelsMapping = {
-      "Strongly disagree" : "Not lonely at all",
-      "Disagree" : "A little lonely",
-      "Slightly disagree" : "Somewhat lonely",
-      "Slightly agree" : "Lonely",
-      "Agree" : "Very lonely",
-      "Strongly agree" : "Extremely lonely"
+      "Strongly disagree": "Not lonely at all",
+      Disagree: "A little lonely",
+      "Slightly disagree": "Somewhat lonely",
+      "Slightly agree": "Lonely",
+      Agree: "Very lonely",
+      "Strongly agree": "Extremely lonely",
     };
 
     //-----------------------------------------------------------------------------------------------------------------
@@ -125,7 +125,9 @@ export class Sankey {
           .select("#sankey-tooltip")
           .style("opacity", 1)
           .style("display", "block");
-        const attributeValue = nodeLabelsMapping.hasOwnProperty(d.id) ? nodeLabelsMapping[d.id] : d.id;
+        const attributeValue = nodeLabelsMapping.hasOwnProperty(d.id)
+          ? nodeLabelsMapping[d.id]
+          : d.id;
 
         tooltip.html(`
       <div class="sankey-tooltip-heading">${d.value.toLocaleString()} said ${attributeValue}</div>
@@ -139,13 +141,17 @@ export class Sankey {
         });
 
         attributePercentages.forEach((d) => {
-          const attributeValue = nodeLabelsMapping.hasOwnProperty(d.attribute) ? nodeLabelsMapping[d.attribute] : d.attribute;
+          const attributeValue = nodeLabelsMapping.hasOwnProperty(d.attribute)
+            ? nodeLabelsMapping[d.attribute]
+            : d.attribute;
 
           tooltip.select(".sankey-tooltip-content").append("div").html(`
           <div class="sankey-tooltip-square" style="background-color: ${vis.getColorForAttribute(
-            d.attribute,
+            d.attribute
           )}"></div>
-          <div class="sankey-tooltip-percentage">${d.percentage.toFixed(1,)}%</div>
+          <div class="sankey-tooltip-percentage">${d.percentage.toFixed(
+            1
+          )}%</div>
           <div class="sankey-tooltip-attribute">${attributeValue}</div>
         `);
         });
@@ -182,7 +188,9 @@ export class Sankey {
     nodesLabels
       .merge(nodesLabelsEnter)
       .text((d) => {
-        return nodeLabelsMapping.hasOwnProperty(d.id) ? nodeLabelsMapping[d.id] : d.id;
+        return nodeLabelsMapping.hasOwnProperty(d.id)
+          ? nodeLabelsMapping[d.id]
+          : d.id;
       })
       .attr("fill", "grey")
       .attr("x", (d) => (d.x0 < vis.width / 2 ? d.x1 - 40 : d.x0 + 40))
@@ -202,6 +210,7 @@ export class Sankey {
 
     vis.linksEnter = vis.links.enter().append("path").attr("class", "links");
 
+    console.log("vis.links", vis.sankeyChart.links);
     vis.linksEnter
       .merge(vis.links)
       .attr("d", d3Sankey.sankeyLinkHorizontal())
@@ -218,33 +227,39 @@ export class Sankey {
     // Chart labels
 
     vis.isolationText = vis.svg
-        .selectAll(".isolation-text")
-        .data(["Isolation"]);
+      .selectAll(".isolation-text")
+      .data(["Isolation"]);
 
     vis.isolationText = vis.isolationText
-        .join("text")
-        .attr("class", "isolation-text")
-        .text((d) => d)
-        .attr("fill", "white")
-        .attr(
-            "transform",
-            `translate(${Math.min(vis.width, vis.calculateMaxWidth()) + vis.config.margin.left + 20}, 
-                        ${vis.config.margin.top - 10})`,
-        );
+      .join("text")
+      .attr("class", "isolation-text")
+      .text((d) => d)
+      .attr("fill", "white")
+      .attr(
+        "transform",
+        `translate(${
+          Math.min(vis.width, vis.calculateMaxWidth()) +
+          vis.config.margin.left +
+          20
+        }, 
+                        ${vis.config.margin.top - 10})`
+      );
 
     vis.lonelinessText = vis.svg
-        .selectAll(".loneliness-text")
-        .data(["Loneliness"]);
+      .selectAll(".loneliness-text")
+      .data(["Loneliness"]);
 
     vis.lonelinessText = vis.lonelinessText
-        .join("text")
-        .attr("class", "loneliness-text")
-        .text((d) => d)
-        .attr("fill", "white")
-        .attr(
-            "transform",
-            `translate(${vis.config.margin.left + 35}, ${vis.config.margin.top - 10})`,
-        );
+      .join("text")
+      .attr("class", "loneliness-text")
+      .text((d) => d)
+      .attr("fill", "white")
+      .attr(
+        "transform",
+        `translate(${vis.config.margin.left + 35}, ${
+          vis.config.margin.top - 10
+        })`
+      );
   }
 
   //-----------------------------------------------------------------------------------------------------------------
@@ -295,7 +310,7 @@ export class Sankey {
     }
 
     console.error(
-      `Attribute ${attribute} does not exist in any color scales, returning Yellow!}`,
+      `Attribute ${attribute} does not exist in any color scales, returning Yellow!}`
     );
     return "yellow";
   }
