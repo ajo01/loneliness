@@ -1,5 +1,7 @@
 # Loneliness - A Story
 
+You can see the project [here](https://loneliness-visualization.netlify.app/).
+
 The feeling of loneliness can sometimes feel inescapable. In many, it can become chronic
 and even lead to depression. In others, it can spur a need to take action and go out more.
 Why do we feel lonely? And what factors contribute to it? What can we discover about
