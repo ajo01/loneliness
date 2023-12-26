@@ -185,6 +185,7 @@ const BidirectionalPage = ({ data1 }) => {
 
       lonelinessSelectionGlobal = lonelinessSelection;
     }
+    // eslint-disable-next-line
   }, [data1]);
 
   // filters data for just gender
