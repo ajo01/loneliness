@@ -1,6 +1,8 @@
 import * as d3 from "d3";
 import { filterSociological } from "../pages/BidirectionalPage";
-import { tooltip } from "../assets/svg";
+import {
+  tooltip
+} from "../assets/svg";
 
 export class StackedBarchart {
   /**
@@ -76,28 +78,27 @@ export class StackedBarchart {
       .tickSizeOuter(0)
       .tickPadding(10)
       .tickFormat((d) => d + "%");
-
+    
     var mapText = {
-      Men: "Male",
-      Women: "Female",
+      "Men": "Male",
+      "Women": "Female",
 
       "Bachelor's degree or higher": "University",
-      "College, CEGEP or other non-university certificate or diploma":
-        "College",
-      "Apprenticeship or trades certificate or diploma": "Trades",
-      "Secondary (high) school diploma or equivalency certificate":
-        "High school",
+      "College, CEGEP or other non-university certificate or diploma": "College",
+      "Apprenticeship or trades certificate or diploma" : "Trades",
+      "Secondary (high) school diploma or equivalency certificate" : "High school",
       "No certificate, diploma or degree": "No certificate",
 
       "Rural areas": "Rural",
       "Urban areas": "Urban",
 
-      Immigrants: "Immigrants",
-      "Non-immigrants": "Non-immigrants",
+      "Immigrants": "Immigrants",
+      "Non-immigrants":"Non-immigrants",
 
       "Other activity": "Other activity",
-      Retired: "Retired",
+      "Retired":"Retired",
       "Working at a paid job or business": "Working",
+      
     };
 
     vis.yAxis = d3
@@ -107,10 +108,11 @@ export class StackedBarchart {
       .tickPadding(10)
       .tickFormat(
         // adding ... to labels that are too long
-        (d, i) => {
+        (d,i)=>{
           return mapText[d];
         }
       );
+    
 
     // Define size of SVG drawing area
     vis.svg = d3
@@ -133,7 +135,9 @@ export class StackedBarchart {
     vis.yAxisG = vis.chart.append("g").attr("class", "axis y-axis");
 
     // wrap function for titles that are too long
-    vis.yAxisG.selectAll(".tick > text").attr("fill", "#fff");
+    vis.yAxisG.selectAll(".tick > text")
+      .attr('fill', '#fff');
+      
 
     // Append category title
     vis.svg
@@ -144,13 +148,13 @@ export class StackedBarchart {
       .attr("fill", "white")
       .attr("dy", ".71em")
       .attr("text-anchor", "end")
-      .text((d) => {
-        const str = vis.data[0].graphCategory;
-        let result = str.charAt(0).toUpperCase() + str.slice(1);
-        return result;
-      });
+      .text(d=> 
+        { const str=vis.data[0].graphCategory;
+          let result = str.charAt(0).toUpperCase() + str.slice(1);
+          return result;
+        });
 
-    if (vis.data[0].graphCategory === "gender") {
+    if(vis.data[0].graphCategory ==="gender"){
       vis.svg
         .append("svg")
         .attr("class", "tooltip-icon")
@@ -162,7 +166,7 @@ export class StackedBarchart {
         .attr("opacity", 1)
         .html(tooltip)
         .on("mouseover", function (event, d) {
-          d3
+            d3
             .select("#tooltip")
             .style("display", "block")
             .style("left", event.pageX + vis.config.tooltipPadding + "px")
@@ -172,11 +176,13 @@ export class StackedBarchart {
                   <div class="tooltip-title"> 🚨 Gender data is not entirely accurate (due to dataset limitations)</div>
                   <div class="tooltip-title"> 🌈 For more detailed data please see StatCan (linked below)</div>
                   `);
-        })
+        }
+        )
         .on("mouseleave", () => {
           d3.select("#tooltip").style("display", "none");
         });
-    }
+        }
+    
   }
 
   /**
@@ -261,7 +267,7 @@ export class StackedBarchart {
       .attr("radius", 10);
 
     // Add rectangles
-    barGroup
+    const bars = barGroup
       .selectAll(".bar")
       .data((d) => d)
       .join("rect")
@@ -269,7 +275,7 @@ export class StackedBarchart {
       .attr("x", (d) => vis.xScale(d[0]))
       .attr("width", (d) => {
         // Check if the stacked data has removed this rectangle, and if so, return a width of 0 in updated chart so it doesn't display
-        if (isNaN(d[1])) {
+        if(isNaN(d[1])){
           return 0;
         } else {
           const newWidth = vis.xScale(d[1]) - vis.xScale(d[0]);
@@ -292,6 +298,7 @@ export class StackedBarchart {
         return vis.yScale(d.data.value);
       });
 
+
     const invisiBars = vis.chart
       .selectAll(".invisiBar")
       .data(vis.percentages, (d) => d.value)
@@ -299,92 +306,75 @@ export class StackedBarchart {
       .attr("class", "invisi-bar")
       .attr("fill-opacity", 0)
       .attr("width", vis.width)
-      .attr("height", vis.yScale.bandwidth())
+      .attr("height",vis.yScale.bandwidth())
       .attr("y", (d) => vis.yScale(d.value));
 
     invisiBars
       .on("mouseover", function (event, d) {
-        if (isNaN(d["Rarely or never feels lonely"])) {
+        if(isNaN(d["Rarely or never feels lonely"])){
           d3
-            .select("#tooltip")
-            .style("display", "block")
-            .style("left", event.pageX + vis.config.tooltipPadding + "px")
-            // Following code is for adding the tooltip, depending on the data, different tooltips are displayed
-            .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
+          .select("#tooltip")
+          .style("display", "block")
+          .style("left", event.pageX + vis.config.tooltipPadding + "px")
+          // Following code is for adding the tooltip, depending on the data, different tooltips are displayed
+          .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
                 <div class="tooltip-heading"> category </div>
                 <div class="tooltip-title"> 👋 ${d.value}</div>
                 <div class="tooltip-spacer"></div>
                 <div class="tooltip-heading"> are feeling... </div>
                 
-                <div class="tooltip-title" > 🤍 ${d[
-                  "Sometimes feels lonely"
-                ].toFixed(1)}% Sometimes lonely </div>
-                <div class="tooltip-title" > 💙 ${d[
-                  "Always or often feels lonely"
-                ].toFixed(1)}% Always or often lonely </div>
+                <div class="tooltip-title" > 🤍 ${d["Sometimes feels lonely"].toFixed(1)}% Sometimes lonely </div>
+                <div class="tooltip-title" > 💙 ${d["Always or often feels lonely"].toFixed(1)}% Always or often lonely </div>
 
                 `);
-        } else if (isNaN(d["Sometimes feels lonely"])) {
+        } else if (isNaN(d["Sometimes feels lonely"])){
           d3
-            .select("#tooltip")
-            .style("display", "block")
-            .style("left", event.pageX + vis.config.tooltipPadding + "px")
-            .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
+          .select("#tooltip")
+          .style("display", "block")
+          .style("left", event.pageX + vis.config.tooltipPadding + "px")
+          .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
                 <div class="tooltip-heading"> category </div>
                 <div class="tooltip-title"> 👋 ${d.value}</div>
                 <div class="tooltip-spacer"></div>
                 <div class="tooltip-heading"> are feeling... </div>
                 
-                <div class="tooltip-title" > 💛 ${d[
-                  "Rarely or never feels lonely"
-                ].toFixed(1)}% Rarely or never lonely </div>
-                <div class="tooltip-title" > 💙 ${d[
-                  "Always or often feels lonely"
-                ].toFixed(1)}% Always or often lonely </div>
+                <div class="tooltip-title" > 💛 ${d["Rarely or never feels lonely"].toFixed(1)}% Rarely or never lonely </div>
+                <div class="tooltip-title" > 💙 ${d["Always or often feels lonely"].toFixed(1)}% Always or often lonely </div>
 
                 `);
-        } else if (isNaN(d["Always or often feels lonely"])) {
+        } else if (isNaN(d["Always or often feels lonely"])){
           d3
-            .select("#tooltip")
-            .style("display", "block")
-            .style("left", event.pageX + vis.config.tooltipPadding + "px")
-            .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
+          .select("#tooltip")
+          .style("display", "block")
+          .style("left", event.pageX + vis.config.tooltipPadding + "px")
+          .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
                 <div class="tooltip-heading"> category </div>
                 <div class="tooltip-title"> 👋 ${d.value}</div>
                 <div class="tooltip-spacer"></div>
                 <div class="tooltip-heading"> are feeling... </div>
                 
-                <div class="tooltip-title" > 💛 ${d[
-                  "Rarely or never feels lonely"
-                ].toFixed(1)}% Rarely or never lonely </div>
-                <div class="tooltip-title" > 🤍 ${d[
-                  "Sometimes feels lonely"
-                ].toFixed(1)}% Sometimes lonely </div>
+                <div class="tooltip-title" > 💛 ${d["Rarely or never feels lonely"].toFixed(1)}% Rarely or never lonely </div>
+                <div class="tooltip-title" > 🤍 ${d["Sometimes feels lonely"].toFixed(1)}% Sometimes lonely </div>
                
                 `);
         } else {
           d3
-            .select("#tooltip")
-            .style("display", "block")
-            .style("left", event.pageX + vis.config.tooltipPadding + "px")
-            .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
+          .select("#tooltip")
+          .style("display", "block")
+          .style("left", event.pageX + vis.config.tooltipPadding + "px")
+          .style("top", event.pageY + vis.config.tooltipPadding + "px").html(`
                 <div class="tooltip-heading"> category </div>
                 <div class="tooltip-title"> 👋 ${d.value}</div>
                 <div class="tooltip-spacer"></div>
                 <div class="tooltip-heading"> are feeling... </div>
                 
-                <div class="tooltip-title" > 💛 ${d[
-                  "Rarely or never feels lonely"
-                ].toFixed(1)}% Rarely or never lonely </div>
-                <div class="tooltip-title" > 🤍 ${d[
-                  "Sometimes feels lonely"
-                ].toFixed(1)}% Sometimes lonely </div>
-                <div class="tooltip-title" > 💙 ${d[
-                  "Always or often feels lonely"
-                ].toFixed(1)}% Always or often lonely </div>
+                <div class="tooltip-title" > 💛 ${d["Rarely or never feels lonely"].toFixed(1)}% Rarely or never lonely </div>
+                <div class="tooltip-title" > 🤍 ${d["Sometimes feels lonely"].toFixed(1)}% Sometimes lonely </div>
+                <div class="tooltip-title" > 💙 ${d["Always or often feels lonely"].toFixed(1)}% Always or often lonely </div>
 
                 `);
         }
+        
       })
 
       .on("mouseleave", () => {
@@ -397,11 +387,12 @@ export class StackedBarchart {
           vis.sociologicalFactorSelection = [];
         } else {
           vis.sociologicalFactorSelection = [];
-          vis.sociologicalFactorSelection.push(d.value);
+          vis.sociologicalFactorSelection.push(d.value); 
         }
         vis.setSociologicalFactorSelection(vis.sociologicalFactorSelection);
         filterSociological(vis.sociologicalFactorSelection);
         d3.select(this).classed("active", !isActive);
+          
       });
 
     // Update axes

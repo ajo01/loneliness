@@ -185,7 +185,7 @@ const BidirectionalPage = ({ data1 }) => {
 
       lonelinessSelectionGlobal = lonelinessSelection;
     }
-  }, [data1, lonelinessSelection, sociologicalFactorSelection]);
+  }, [data1]);
 
   // filters data for just gender
   function filterObjectsForStack(data1, graphCategory) {

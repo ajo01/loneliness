@@ -1,6 +1,10 @@
 import * as d3 from "d3";
 import { filterLoneliness } from "../pages/BidirectionalPage";
-import { happyEmoji, avgEmoji, lonelyEmoji } from "../assets/svg";
+import {
+  happyEmoji,
+  avgEmoji,
+  lonelyEmoji
+} from "../assets/svg";
 
 // adding in template code to edit for the barchart
 export class Barchart {
@@ -190,32 +194,39 @@ export class Barchart {
       .attr("class", "bar-group")
       .on("click", function (event, d) {
         const isActive = vis.lonelinessSelection.includes(d.key);
-
-        if (isActive) {
-          vis.lonelinessSelection = vis.orderedKeys.filter((f) => f !== d.key); // remove the item that used to be selected
+      
+        if (isActive ) {
+          vis.lonelinessSelection = vis.orderedKeys.filter(
+            (f) => f !== d.key
+          ); // remove the item that used to be selected
           d3.select(this).classed(
             "inactive",
             d3.select(this).classed("inactive")
           );
-        } else if (!isActive) {
+        } else if (!isActive ) {
           vis.lonelinessSelection = vis.orderedKeys;
           d3.select(this).classed(
             "inactive",
             d3.select(this).classed("inactive")
           );
-          d3.select(".point").classed("inactive");
+          d3.select('.point').classed("inactive");
         }
         vis.setSelection(vis.lonelinessSelection);
         filterLoneliness();
+        
       })
       .on("mouseover", function (event, d) {
         let tooltipLoneliness;
+        let tooltipColor;
         if (d.key === "Rarely or never feels lonely") {
           tooltipLoneliness = "💛 Rarely or never lonely";
+          tooltipColor = "orange";
         } else if (d.key === "Always or often feels lonely") {
           tooltipLoneliness = "💙 Always or often lonely";
+          tooltipColor = "dark-blue";
         } else {
           tooltipLoneliness = "🤍 Sometimes lonely";
+          tooltipColor = "blue";
         }
         d3
           .select("#tooltip")
@@ -232,12 +243,12 @@ export class Barchart {
       })
       .on("mouseleave", () => {
         d3.select("#tooltip").style("display", "none");
-      });
+      })
 
     // Add rectangles
-    barGroup
+    const bars = barGroup
       .selectAll(".bar")
-      .data((d) => [d], vis.xValue)
+      .data(d=>[d], vis.xValue)
       .join("rect")
       .attr("class", "bar")
       .attr("fill", (d) => {
@@ -249,59 +260,56 @@ export class Barchart {
       })
       .classed("inactive", (d) => !vis.lonelinessSelection.includes(d.key))
       .attr("x", (d) => vis.xScale(vis.xValue(d)))
-      .attr("width", (d) => {
+      .attr("width", d=> {
         return vis.xScale.bandwidth();
       })
       .attr("height", (d) => vis.height - vis.yScale(vis.yValue(d)))
       .attr("y", (d) => vis.yScale(vis.yValue(d)))
       .attr("rx", 5);
+     
+      
 
     // Adding emojis to the barchart
-    barGroup
+   
+    const circles = barGroup
       .selectAll(".circle-point")
-      .data((d) => [d], vis.xValue)
+      .data(d=>[d], vis.xValue)
       .join("circle")
       .attr("class", "circle-point")
       .classed("inactive", (d) => !vis.lonelinessSelection.includes(d.key))
-      .attr("cx", (d) => vis.xScale(vis.xValue(d)) + vis.xScale.bandwidth() / 2)
-      .attr("cy", (d) => vis.yScale(vis.yValue(d)) - 30)
+      .attr("cx", (d) => vis.xScale(vis.xValue(d))+vis.xScale.bandwidth()/2)
+      .attr("cy", (d) => vis.yScale(vis.yValue(d))-30)
       .attr("r", 20)
       .attr("fill", (d) => {
         if (!vis.lonelinessSelection.includes(d.key)) {
           return "#404040";
-        } else {
+        } else{
           return vis.colorScale(vis.colorValue(d));
         }
+        
       });
-    barGroup
+    
+    const emojis = barGroup
       .selectAll(".point")
-      .data((d) => [d], vis.xValue)
+      .data(d=>[d], vis.xValue)
       .join("svg")
       .attr("class", "point")
       .attr("opacity", (d) => {
         if (!vis.lonelinessSelection.includes(d.key)) {
           return 0.5;
-        } else {
+        } else{
           return 1;
-        }
-      })
-      .attr(
-        "x",
-        (d) => vis.xScale(vis.xValue(d)) + vis.xScale.bandwidth() / 2 - 21
-      )
-      .attr("y", (d) => vis.yScale(vis.yValue(d)) - 50)
+        }})
+      .attr("x", (d) => vis.xScale(vis.xValue(d))+vis.xScale.bandwidth()/2 -21)
+      .attr("y", (d) => vis.yScale(vis.yValue(d))-50)
       .html((d) => {
         console.log(d);
-        if (d.key === "Rarely or never feels lonely") {
-          return happyEmoji;
-        }
-        if (d.key === "Sometimes feels lonely") {
-          return avgEmoji;
-        }
-        if (d.key === "Always or often feels lonely") {
-          return lonelyEmoji;
-        }
+        if (d.key === "Rarely or never feels lonely") { return happyEmoji;}
+        if (d.key === "Sometimes feels lonely") {return avgEmoji;}
+        if (d.key === "Always or often feels lonely") {return lonelyEmoji;}
       });
+    
+
 
     // Update axes
     vis.xAxisG.call(vis.xAxis);
