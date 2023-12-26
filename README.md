@@ -1,5 +1,7 @@
 # Loneliness - A Story
 
+You can see the project [here](https://loneliness-visualization.netlify.app/).
+
 The feeling of loneliness can sometimes feel inescapable. In many, it can become chronic
 and even lead to depression. In others, it can spur a need to take action and go out more.
 Why do we feel lonely? And what factors contribute to it? What can we discover about
@@ -9,6 +11,14 @@ our project, we wanted to focus on the everyday impacts and factors that contrib
 loneliness.
 We wanted to take a data-driven story approach to talk about the issue of loneliness and
 its factors and see correlations and interesting patterns for ourselves and others alike.
+
+
+<img width="1030" alt="screenshot-2023-12-07-at-2 14 32-pm" src="https://github.com/ajo01/loneliness/assets/70789275/29d072de-8677-45ff-a188-27171097239d">
+<img width="1320" alt="sankey" src="https://github.com/ajo01/loneliness/assets/70789275/1bbdfb2b-092d-423e-a2ec-5dd9bc07b92e">
+<img width="1427" alt="dot" src="https://github.com/ajo01/loneliness/assets/70789275/097f8334-9752-4e39-9de0-8486eed8668a">
+<img width="1435" alt="screenshot-2023-12-07-at-2 17 31-pm" src="https://github.com/ajo01/loneliness/assets/70789275/f009833f-1b89-4534-afa9-dda012c3eaec">
+
+
 
 ## How to run
 
